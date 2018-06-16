@@ -1,0 +1,40 @@
+@import url('bower_components/bootstrap/dist/css/bootstrap.min.css');
+
+.ng-cloak {
+    display: none !important;
+}
+body {
+    background: beige;
+}
+.weather-section{
+    text-align: center;
+    width: 80%;
+}
+.search-section {
+    margin: 30px auto;
+}
+.search-box {
+    height: 30px;
+    margin: auto 10px;
+}
+.search-label{
+    font-size: 19px;
+    font-weight: normal;
+}
+.table-header{
+    color:white;
+    background: #337ab7;
+}
+.detail-table {
+    margin: auto;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+.detail-table th, .detail-table td {
+    width: 150px;
+    text-align: center;
+    padding: 4px;
+}
+.detail-table td {
+    border: 1px solid #3b7ecc;
+}
