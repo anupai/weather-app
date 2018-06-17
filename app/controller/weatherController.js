@@ -10,7 +10,7 @@ weatherApp.controller('WeatherController', ['weatherService', function (weatherS
                         if (response && response.status == 200) {
                                 vm.cityData.push({
                                         city: response.data.name,
-                                        temperature: (response.data.main.temp-273.15).toFixed(2),
+                                        temperature: (response.data.main.temp-273.15).toFixed(1),
                                         condition: response.data.weather[0].main
                                 });
                                 vm.city = "";
