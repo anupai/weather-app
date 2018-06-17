@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="app.css" />
+
+</head>
+
+<body ng-app="WeatherApp"  class="ng-cloak container">
+    <div ng-controller="WeatherController as weather" class="weather-section">
+        <div class="row search-section">
+            <label class="search-label">Cities : </label>
+            <input type="text" ng-model="weather.city" class="search-box">
+            <button class="btn btn-primary" ng-click="weather.getCityWeather()">Submit</button>
+        </div>
+        <div class="table-section" ng-if="weather.cityData.length > 0">
+            <table class="detail-table">
+                <tr class="table-header">
+                    <th>City</th>
+                    <th>°C</th>
+                    <th>Condition</th>
+                </tr>
+                <tr class="city-detail" ng-repeat="data in weather.cityData">
+                    <td>{{data.city}}</td>
+                    <td>{{data.temperature}}</td>
+                    <td>{{data.condition}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="app.js"></script>
+    <script src="controller/weatherController.js"></script>
+    <script src="service/weatherService.js"></script>
+</body>
+
+</html>
